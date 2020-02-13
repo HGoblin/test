@@ -19,3 +19,11 @@ jobs:
         -t hgoblin/aglio:latest \
         -i /apiblueprint/api.apib -o /apiblueprint/index.html
         cat ${{ github.workspace }}/index.html
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        cd ${{ github.workspace }}
+        git commit -m "Add changes" -a
+        git push
+Inputs
