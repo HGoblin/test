@@ -26,4 +26,3 @@ jobs:
         cd ${{ github.workspace }}
         git commit -m "Add changes" -a
         git push
-Inputs
