@@ -13,4 +13,4 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/apiblueprint \
-        hgoblin/aglio:latest -i
+        hgoblin/aglio:latest -i /apiblueprint/api.apib -o /apiblueprint/index.html
