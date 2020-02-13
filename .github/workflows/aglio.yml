@@ -15,3 +15,4 @@ jobs:
         -v ${{ github.workspace }}:/apiblueprint \
         -t hgoblin/aglio:latest \
         -i /apiblueprint/api.apib -o /apiblueprint/index.html
+        cat ${{ github.workspace }}/index.html
