@@ -1,0 +1,16 @@
+name: API Blueprint
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build API Blueprint in aglio container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/apiblueprint \
+        hgoblin/aglio:latest -i
